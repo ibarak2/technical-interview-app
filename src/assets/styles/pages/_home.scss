@@ -1,0 +1,208 @@
+.home {
+  display: grid;
+  grid-template-columns: minmax(24px, 1fr) 1fr minmax(24px, 1fr);
+  @media (min-width: 400px) {
+    grid-template-columns: 165px 1fr 165px;
+  }
+  //   grid-template-rows: repeat(6, 1fr);
+  //   flex-direction: column;
+  //   max-width: 1440px;
+  > * {
+    grid-column: 2;
+
+    &.full {
+      grid-column: 1 /-1;
+    }
+  }
+
+  & .app-header {
+    background-color: #014e56;
+    color: white;
+
+    & .app-header-container {
+      display: flex;
+      justify-content: space-between;
+      width: 1110px;
+      margin-top: 70px;
+      & .navigation {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+
+        h3 {
+          font-size: 40px;
+        }
+        a {
+          font-size: 18px;
+        }
+      }
+    }
+
+    & button {
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 24px;
+      width: 153px;
+      height: 48px;
+      color: white;
+      font-size: 18px;
+      font-family: Livvic-SemiBold;
+    }
+  }
+
+  & .welcome {
+    background-color: #014e56;
+    & .welcome-container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 352px;
+
+      padding-top: 130px;
+      padding-bottom: 250px;
+
+      @media (min-width: 400px) {
+        flex-direction: row;
+        width: 1110px;
+      }
+
+      & .title {
+        width: 352px;
+
+        @media (min-width: 400px) {
+          width: 630px;
+        }
+
+        h1 {
+          line-height: 1em;
+          color: white;
+          font-size: 40px;
+
+          @media (min-width: 400px) {
+            font-size: 105px;
+          }
+
+          span {
+            color: #f67e7e;
+          }
+        }
+      }
+      & .description {
+        width: 445px;
+        color: white;
+        font-size: 18px;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  & .interests {
+    background-color: #012f34;
+  }
+
+  & .reviews {
+    background-color: #004047;
+    z-index: -10;
+    & .reviews-container {
+      width: 352px;
+      @media (min-width: 400px) {
+        height: 745px;
+        width: 1110px;
+      }
+
+      h2 {
+        text-align: center;
+        width: 327px;
+        margin: auto;
+        padding-top: 140px;
+        padding-bottom: 70px;
+        color: white;
+        font-size: 32px;
+        @media (min-width: 400px) {
+          width: 932px;
+          font-size: 48px;
+        }
+        span {
+          color: #79c8c7;
+        }
+      }
+
+      & .review-cards {
+        width: 352px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+
+        @media (min-width: 400px) {
+          flex-direction: row;
+          width: 1110px;
+          gap: 30px;
+        }
+
+        & .review {
+          position: relative;
+          text-align: center;
+          color: white;
+          p {
+            font-size: 15px;
+            margin-top: -105px;
+            margin-bottom: 28px;
+          }
+
+          h5 {
+            color: #79c8c7;
+            font-family: Livvic-Bold;
+            font-size: 18px;
+          }
+          h6 {
+            font-family: Livvic-Medium-Italic;
+            font-size: 13px;
+          }
+
+          & .quotes {
+            position: relative;
+            width: 130px;
+            height: 120px;
+            // right: 0px;
+            top: -50px;
+            z-index: -5;
+            // transform: scale(60%);
+          }
+
+          & .img {
+            width: 62px;
+            height: 62px;
+            border: 2px solid #c4fffe;
+            border-radius: 50%;
+            margin-top: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  & .contact-us {
+    background-color: #f67e7e;
+  }
+
+  & .app-footer {
+    background-color: #002529;
+  }
+}
+
+.wrapper-container {
+  display: grid;
+  grid-template-columns: minmax(24px, 1fr) 1fr minmax(24px, 1fr);
+  @media (min-width: 400px) {
+    grid-template-columns: minmax(165px, 1fr) 1fr minmax(165px, 1fr);
+  }
+  > * {
+    grid-column: 2;
+
+    &.full {
+      grid-column: 1 /-1;
+    }
+  }
+}
